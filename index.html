@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercícios JS</title>
+    <link rel="stylesheet" href="Estilo/index.css"> <!-- estilo --> 
+    <script src="Script/exercicios.js"></script> <!-- Script -->
+</head>
+<body>
+    <!-- CABEÇALHO PRINCIPAL -->
+    <div id="dvCorpo">
+        <h1 class="titulosMain" id="tituloMain">Lista de Exercícios - JavaScript</h1>
+
+        <!-- ************* PARTE 1 ************* -->
+         <!-- Cabeçalho parte 1 -->
+         <div id="dvParte1" class="dvParte">
+            <h2 id="tituloP1">Parte 1 – Declaração de Variáveis (let e const) (4 questões)</h2>
+        </div>
+        
+
+        <!-- ##### EXERCÍCIO 01 ##### -->
+        <div id="dvLista1" class="dvLista">
+
+            <!-- Cabeçalho Ex01 -->
+            <div id="dvCab01" class="dvCab">
+                <h3>Exercício 01 - Declaração com let:</h3>
+
+                <p class="pEnunciado">
+                    Crie uma variável let idade e atribua sua idade. Depois, atribua um novo valor 
+                    representando a idade daqui a 5 anos. Mostre os dois valores no console: “Minha 
+                    idade hoje é < idade > e daqui a 5 anos será < nova_idade >”
+                </p>
+            </div>
+
+            <!-- Ex01 - Entrada de Dados -->
+            <div class="dvExc">
+                <h4 class="titulos">Entrada:</h4>
+
+                <!-- Informe a Idade -->
+                <p>
+                    <p>Informe sua idade:</p>
+                    <input type="number" class="txEx" id="txIdade">
+                </p>
+
+                <!-- botão Ex01 -->
+                <button onclick="ex01_pt01()" class="btExc">Executar</button>
+            </div>
+            
+            <!-- Ex01 - Saida de Dados -->
+            <div class="dvRes">
+                <h4 class="pRes" id="titleRes">Saida:</h4>
+
+                <p id="pIdade" class="pRes"></p>
+                <p id="pIdade5" class="pRes"></p>
+            </div>
+        </div>
+        
+        <!-- ##### EXERCÍCIO 02 A ##### -->
+        <div id="dvLista2a" class="dvLista">
+            
+            <!-- Cabeçalho Ex02 A -->
+            <div id="dvCab02" class="dvCab">
+                <h3>Exercício 02 - Uso de const:</h3>
+
+                <p class="pEnunciado">
+                    a) Declare uma constante PI com valor 3.14159. Tente atribuir outro valor a PI e 
+                    veja o erro no console. Explique por que isso acontece.
+                </p>
+            </div>
+            
+            <!-- Ex02 A - Entrada de Dados -->
+            <div class="dvExc">
+                <h4 class="pTitulos">Entrada:</h4>
+                <!-- Alterar o Valor de pi -->
+                <p>
+                    <p>Tente reatribuir o valor de pi:</p>
+                    <input type="text" class="txEx" id="txErroPi">
+                </p>
+                <!-- botão Ex02 A -->
+                <button onclick="ex02a_pt01()" class="btExc">Executar</button>
+            </div>
+            
+            <!-- Ex02 A - Saída de Dados -->
+            <div class="dvRes">
+                <h4 class="pRes">Saida:</h4>
+                
+                <p class="pRes">const pi = 3.14159</p>
+                <p id="pRes02" class="pRes"></p>
+            </div>
+        </div>
+
+        <!-- ##### EXERCÍCIO 02 B ##### -->
+        <div id="dvLista2b" class="dvLista">
+
+            <!-- Cabeçalho Ex02 B -->
+            <div id="dvCab02b" class="dvCab">
+
+                <p class="pEnunciado">
+                    b) Declare uma constante SemanasDoAno sem atribuir valor. Na linha seguinte 
+                    atribua o valor 52. O que ocorre?
+                </p>
+            </div>
+
+            <!-- Ex02 B - Entrada de Dados -->
+            <div class="dvExc">
+                <h4 class="pTitulos">Entrada:</h4>
+                <p>Tente reatribuir o valor da constante semana do ano:</p>
+
+                <!-- botão Ex02 B -->
+                <button onclick="ex02b_pt01()" class="btExc">Reatribuir</button>
+            </div>
+
+            <!-- Ex02 B - Saída de Dados -->
+            <div class="dvRes">
+                <h4 class="pRes">Saida:</h4>
+
+                <p class="pRes">const semanaDoAno = ""</p>
+                <p id="pRes02b" class="pRes"></p>
+            
+            </div>
+
+        </div>
+
+        <!-- ##### EXERCÍCIO 03 ##### -->
+        <div class="dvLista">
+
+            <!-- Cabeçalho Ex03 -->
+            <div id="dvCab03" class="dvCab">
+                <h3>Exercício 03 - Concatenação de Strings:</h3>
+
+                <p class="pTitulos">
+                    Crie três variáveis (let nome, let sobrenome, let anoNascimento) e mostre no 
+                    console a frase:
+                    "Olá, meu nome é < nome completo > e eu nasci em < anoNascimento >". < nome 
+                    completo > deve ser a concatenação de nome e sobrenome.
+                </p>
+            </div>
+
+            <!-- Ex03 - Entrada de Dados -->
+            <div class="dvExc">
+                <h4 class="pEnunciado">Entrada:</h4>
+                <p>
+                    <label>Nome:</label>
+                    <br>
+                    <input type="text" class="txEx" id="txNome" value=" ">
+                </p>
+                <p>
+                    <label>Sobrenome:</label>
+                    <br>
+                <input type="text" class="txEx" id="txSobrenome" value=" ">
+                </p>
+                <p>
+                    <label>Ano de nascimento:</label>
+                    <br>
+                <input type="text" class="txEx" id="txAnoNasc" value=" ">
+                </p>
+
+                <!-- botão Ex03 -->
+                <button onclick="ex03_pt01()" class="btExc">Executar</button>
+            </div>
+
+            <!-- Ex03 - Saída de Dados -->
+            <div class="dvRes">
+                <h4 class="pRes">Saida:</h4>
+                <p id="pRes03" class="pRes"></p>
+            </div>
+        </div>
+
+        <!-- ##### EXERCÍCIO 04 ##### -->       
+        <div class="dvLista">
+
+            <!-- Cabeçalho Ex04 -->
+            <div id="dvCab04" class="dvCab">
+                <h3>Exercício 04 - Diferença de Escopo:</h3>
+
+                <p class="pTitulos">
+                    Declare uma variável let numero = 10 fora de um bloco {}. Dentro do bloco, 
+                    declare novamente let numero = 20. Mostre o valor da variável dentro e fora do 
+                    bloco com console.log.
+                </p>
+            </div>
+            
+            <!-- Ex04 - Entrada de Dados -->
+            <div class="dvExc">
+                <h4 class="pEnunciado">Entrada:</h4>
+
+                <!-- botão Ex04 -->
+                <button onclick="ex04_pt01()" class="btExc">Executar</button>
+            </div>
+
+            <!-- Ex04 - Saída de Dados -->
+            <div class="dvRes">
+                <h4 class="pRes">Saida:</h4>
+                <p id="pRes04G" class="pRes"></p>
+                <p id="pRes04L" class="pRes"></p>
+            </div>
+        </div>
+
+        <!-- ************* PARTE 2 ************* -->
+         <!-- Cabeçalho parte 2 -->
+        <div id="dvParte2" class="dvParte">
+            <h2 id="tituloP2">Parte 2 – Estruturas Condicionais (if, else if, else e operador ternário) (4 questões)</h2>
+        </div>
+
+        <!-- ##### EXERCÍCIO 05 ##### -->
+        <div id="dvLista1" class="dvLista">
+
+            <!-- Cabeçalho Ex05 -->
+            <div id="dvCab01" class="dvCab">
+                <h3>Exercício 05</h3>
+
+                <p class="pEnunciado">
+                    
+                </p>
+            </div>
+
+            <!-- Ex05 - Entrada de Dados -->
+            <div class="dvExc">
+                <h4 class="titulos">Entrada:</h4>
+
+                <!-- botão Ex05 -->
+                <button onclick="" class="btExc">Executar</button>
+            </div>
+            
+            <!-- Ex05 - Saida de Dados -->
+            <div class="dvRes">
+                <h4 class="pRes" id="titleRes">Saida:</h4>
+
+                <p id="" class="pRes"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
