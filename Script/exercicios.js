@@ -109,6 +109,21 @@ function ex06_pt02(){
   document.getElementById("pRes06").innerHTML = res
 }
 
+// Ex07 - Nota de aluno: Receba uma nota de 0 a 10. o >= 7: "Aprovado". o >= 5 e < 7: "Recuperação". o < 5: "Reprovado".
+function ex07_pt02(){
+
+  let nome = document.getElementById("txAluno07").value
+  let nota = document.getElementById("txNum07").value
+  if(nota >=7){
+    document.getElementById("pRes07").innerHTML = `<p>Aluno: ${nome}</p><p>Situação: Aprovado</p><p>Nota: ${nota}</p>`
+  } else if (nota >= 5 && nota< 7) {
+    document.getElementById("pRes07").innerHTML = `<p>Aluno: ${nome}</p><p>Situação: Recuperação</p><p>Nota: ${nota}</p>`
+  } else{
+    document.getElementById("pRes07").innerHTML = `<p>Aluno: ${nome}</p><p>Situação: Reprovado</p><p>Nota: ${nota}</p>`
+  }
+  
+}
+
 // Ex08 - Operador Ternário: Receba um número via prompt e mostre no console: "Positivo" se maior que 0, "Negativo" se menor que 0, ou "Zero" caso contrário, usando apenas operador ternário.
 
 function ex08_pt02(){
