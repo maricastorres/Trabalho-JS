@@ -97,6 +97,18 @@ function ex05_pt02(){
   document.getElementById('pRes05').innerHTML = `Usuário é um(a) ${res}`
 }
 
+// Ex06 - Verificar se um número é par ou ímpar
+function ex06_pt02(){
+  let n1 = document.getElementById("txNum06").value
+  let res
+  if(n1 % 2 == 0){
+    res = `O número ${n1} é <b>par</b>`
+  } else{
+    res = `O número ${n1} é <b>ímpar</b>`
+  }
+  document.getElementById("pRes06").innerHTML = res
+}
+
 // Ex08 - Operador Ternário: Receba um número via prompt e mostre no console: "Positivo" se maior que 0, "Negativo" se menor que 0, ou "Zero" caso contrário, usando apenas operador ternário.
 
 function ex08_pt02(){
