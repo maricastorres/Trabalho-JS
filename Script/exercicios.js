@@ -89,10 +89,21 @@ function ex04_pt01(){
 // Se for maior ou igual a 18, mostre "Adulto"..
 
 function ex05_pt02(){
-  let idade = document.getElementById('txIdade05').value
+  let idade05 = document.getElementById('txIdade05').value
   let res
 
-  idade >= 18 ? res ='Adulto' : (idade < 12 ? res = 'Criança' : res ='Adolescente');
+  idade05 >= 18 ? res ='Adulto' : (idade05 < 12 ? res = 'Criança' : res ='Adolescente');
+
+  document.getElementById('pRes05').innerHTML = `Usuário é um(a) ${res}`
+}
+
+// Ex08 - Operador Ternário: Receba um número via prompt e mostre no console: "Positivo" se maior que 0, "Negativo" se menor que 0, ou "Zero" caso contrário, usando apenas operador ternário.
+
+function ex08_pt02(){
+  let num08 = document.getElementById('txIdade05').value
+  let res
+
+  idade > 0 ? res ='Positivo' : (idade < 12 ? res = 'Criança' : res ='Adolescente');
 
   document.getElementById('pRes05').innerHTML = `Usuário é um(a) ${res}`
 }
