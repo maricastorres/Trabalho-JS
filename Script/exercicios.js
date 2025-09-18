@@ -100,10 +100,10 @@ function ex05_pt02(){
 // Ex08 - Operador Ternário: Receba um número via prompt e mostre no console: "Positivo" se maior que 0, "Negativo" se menor que 0, ou "Zero" caso contrário, usando apenas operador ternário.
 
 function ex08_pt02(){
-  let num08 = document.getElementById('txIdade05').value
+  let num08 = document.getElementById('txNum08').value
   let res
 
-  idade > 0 ? res ='Positivo' : (idade < 12 ? res = 'Criança' : res ='Adolescente');
+  num08 > 0 ? res ='Positivo' : (num08 < 0 ? res = 'Negativo' : res ='Zero');
 
-  document.getElementById('pRes05').innerHTML = `Usuário é um(a) ${res}`
+  document.getElementById('pRes08').innerHTML = `O número inserido é ${res}`
 }
