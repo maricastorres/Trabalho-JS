@@ -153,3 +153,18 @@ function ex09_pt03(){
     document.getElementById("dvRes09").appendChild(para)
   }
 }
+
+// Ex11 - Percorrendo Objetos com for...in: Crie um objeto pessoa com nome, idade e cidade. Use for...in para listar suas propriedades e valores.
+
+function ex11_pt03(){
+  const pessoa = {
+    nome: document.getElementById('txNome11').value,
+    idade: document.getElementById('txIdade11').value,
+    cidade: document.getElementById('txCid11').value,
+  };
+  let txt =''
+  for (let p in pessoa){
+    txt += pessoa[p]+ " "
+  }
+  document.getElementById('pRes11').innerHTML = txt
+}
