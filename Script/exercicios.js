@@ -164,7 +164,7 @@ function ex11_pt03(){
   };
   let txt =''
   for (let p in pessoa){
-    txt += pessoa[p]+ " "
+    txt += p: + " " + pessoa[p]+ " "
   }
   document.getElementById('pRes11').innerHTML = txt
 }
