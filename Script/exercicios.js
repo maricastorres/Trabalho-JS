@@ -1,4 +1,5 @@
-//Declaração de Variáveis (let e const) (4 questões)
+// Parte 01 - Declaração de Variáveis (let e const) (4 questões)
+
 // Ex01 - Declaração com let: Crie uma variável let idade e atribua sua idade. Depois, atribua um novo valor representando a idade daqui a 5 anos. Mostre os dois valores no console: “Minha idade hoje é <idade> e daqui a 5 anos será <nova_idade>”
 
 function ex01_pt01(){
@@ -62,7 +63,7 @@ function ex03_pt01(){
   let anoNasc = document.getElementById('txAnoNasc').value
   const nomeCompleto = nome + ' ' + sobrenome
 
-  if(nome === " " || sobrenome === " " || anoNasc === " "){
+  if(nome === '' || sobrenome === '' || anoNasc === ''){
     document.getElementById('pRes03').innerHTML = `Digite seu nome, sobrenome e ano de nascimento`
   }else{
     document.getElementById('pRes03').innerHTML = `Olá, meu nome é ${nomeCompleto} e eu nasci em ${anoNasc}.`
@@ -79,4 +80,9 @@ function ex04_pt01(){
   document.getElementById('pRes04L').innerHTML = num04
   console.log(num04)
 }
+// **************************************************************
+// Parte 02 - Estruturas Condicionais (if, else if, else e operador ternário) (4 questões)
+
+// Ex04 - Diferença de escopo: REVER
+// Declare uma variável let numero = 10 fora de um bloco {}. Dentro do bloco, declare novamente let numero = 20. Mostre o valor da variável dentro e fora do bloco com console.log.
 
