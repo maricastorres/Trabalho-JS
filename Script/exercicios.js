@@ -153,3 +153,16 @@ function ex09_pt03(){
     document.getElementById("dvRes09").appendChild(para)
   }
 }
+
+//Ex 10 - Contagem Regressiva com while: Mostre no console a contagem regressiva de 10 até 1 com while.
+function ex10_pt03(){
+  let num = 10
+  let para
+  while(num > 0){
+    para = document.createElement("label")
+    para.innerHTML = " "+num
+    document.getElementById("dvRes10").appendChild(para)
+    console.log(num)
+    num = num - 1
+  }
+}
