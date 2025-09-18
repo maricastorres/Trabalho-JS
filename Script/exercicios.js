@@ -177,7 +177,19 @@ function ex11_pt03(){
   };
   let txt =''
   for (let p in pessoa){
-    //txt += p: + " " + pessoa[p]+ " "
+    para = document.createElement("label")
+    para.innerHTML = `${p}: ${pessoa[p]} `
+    document.getElementById("dvRes11").appendChild(para)
   }
   document.getElementById('pRes11').innerHTML = txt
+}
+// Ex12 - Percorrendo Arrays com for...of: Crie um array de frutas e use for...of para mostrar cada fruta no console.
+
+function ex12_pt03(){
+  let frutas = ["Abacaxi", "Manga", "Laranja", "Banana", "Melancia", "Melão"]
+  for(let fruta of frutas){
+    para = document.createElement("label")
+    para.innerHTML = " "+fruta
+    document.getElementById("dvRes12").appendChild(para)
+  }
 }
