@@ -119,3 +119,22 @@ function ex08_pt02(){
 
   document.getElementById('pRes08').innerHTML = `O número inserido é ${res}`
 }
+
+// **************************************************************
+// Parte 3 – Laços de Repetição (for, while, for...in, for...of) (4 questões)
+
+//Ex 09 - Tabuada com for: Receba um número e mostre a tabuada de 1 a 10 usando for
+function ex09_pt03(){
+  let num = document.getElementById("txNum09").value
+  let mult
+  let res
+  let para
+  document.getElementById("pRes09").innerHTML = `Tabuada de ${num}:`
+  for(i = 0; i <= 10; i++){
+    mult = num * i
+    res = `${num} X ${i} = ${mult}`
+    para = document.createElement("p")
+    para.innerHTML = res
+    document.getElementById("dvRes09").appendChild(para)
+  }
+}
