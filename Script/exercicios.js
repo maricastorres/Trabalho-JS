@@ -83,6 +83,16 @@ function ex04_pt01(){
 // **************************************************************
 // Parte 02 - Estruturas Condicionais (if, else if, else e operador ternário) (4 questões)
 
-// Ex04 - Diferença de escopo: REVER
-// Declare uma variável let numero = 10 fora de um bloco {}. Dentro do bloco, declare novamente let numero = 20. Mostre o valor da variável dentro e fora do bloco com console.log.
+// Ex05 - Verificação de Idade: Peça ao usuário (com prompt) sua idade.
+// Se for menor que 12, mostre "Criança".
+// Se estiver entre 12 e 17, mostre "Adolescente".
+// Se for maior ou igual a 18, mostre "Adulto"..
 
+function ex05_pt02(){
+  let idade = document.getElementById('txIdade05').value
+  let res
+
+  idade >= 18 ? res ='Adulto' : (idade < 12 ? res = 'Criança' : res ='Adolescente');
+
+  document.getElementById('pRes05').innerHTML = `Usuário é um(a) ${res}`
+}

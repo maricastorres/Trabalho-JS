@@ -208,26 +208,35 @@
 
             <!-- Cabeçalho Ex05 -->
             <div id="dvCab01" class="dvCab">
-                <h3>Exercício 05</h3>
+                <h3>Exercício 05 - Verificação de Idade:</h3>
 
                 <p class="pEnunciado">
-                    
+                   Peça ao usuário (com prompt) sua idade.
+                    <ul>
+                        <li>Se for menor que 12, mostre "Criança".</li>
+                        <li>Se estiver entre 12 e 17, mostre "Adolescente".</li>
+                        <li>Se for maior ou igual a 18, mostre "Adulto". </li>
+                    </ul>
                 </p>
             </div>
 
             <!-- Ex05 - Entrada de Dados -->
             <div class="dvExc">
                 <h4 class="titulos">Entrada:</h4>
+                <p>
+                    <label for="">Idade:</label>
+                    <input class="txEx" id="txIdade05" type="text">
+                </p>
 
                 <!-- botão Ex05 -->
-                <button onclick="" class="btExc">Executar</button>
+                <button onclick="ex05_pt02()" class="btExc">Executar</button>
             </div>
             
             <!-- Ex05 - Saida de Dados -->
             <div class="dvRes">
                 <h4 class="pRes" id="titleRes">Saida:</h4>
 
-                <p id="" class="pRes"></p>
+                <p id="pRes05" class="pRes"></p>
             </div>
         </div>
     </div>
