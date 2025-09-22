@@ -193,3 +193,39 @@ function ex12_pt03(){
     document.getElementById("dvRes12").appendChild(para)
   }
 }
+
+// **************************************************************
+// Parte 4 – Objetos (3 questões)
+
+//Ex 13 - Criação de Objeto: Crie um objeto carro com propriedades marca, modelo e ano. Mostre todas as propriedades no console, usando uma instrução console.log para cada uma das propriedades.
+
+function ex13_pt04(){
+     const carro= {
+      marca:document.getElementById("txMarca13").value,
+      modelo:document.getElementById("txModelo13").value,
+      ano:document.getElementById("txAno13").value
+
+     }
+     let resposta = `<b>Marca:</b> ${carro.marca}<br><b>Modelo:</b> ${carro.modelo}<br><b>Ano:</b> ${carro.ano}`
+
+     console.log(resposta)
+     document.getElementById("pRes13").innerHTML = resposta
+
+}
+
+//Ex 14 - Método em Objeto: Adicione ao objeto carro um método descricao() que retorne uma string: "Marca: <marca>, Modelo: <modelo>, Ano: <ano>". Chame esse método e mostre o resultado no console.
+
+function ex14_pt04(){
+     const carro= {
+      marca:document.getElementById("txMarca14").value,
+      modelo:document.getElementById("txModelo14").value,
+      ano:document.getElementById("txAno14").value,
+      descricao:function(){
+        return `<b>Marca:</b> ${this.marca}<br><b>Modelo:</b> ${this.modelo}<br><b>Ano:</b> ${this.ano}`     
+     }
+     }
+     let resposta = carro.descricao()
+     console.log(resposta)
+     document.getElementById("pRes14").innerHTML = resposta
+
+}
