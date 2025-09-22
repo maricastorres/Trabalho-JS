@@ -291,13 +291,12 @@ function verificaPar(num){
 function ex17_pt05(){
   const inputString = document.getElementById('txArray17').value;
 
-  // 1. inputString.split(' ') para divide a string em um array de strings.
-  // Por exemplo, "1, 2, 3" se torna ["1", " 2", " 3"].
+  // 1. inputString.split(' ') divide a string em um array de strings. Por exemplo, "1, 2, 3" se torna ["1", " 2", " 3"].
   // 2. inputString.map() percorre cada item da lista e mapeia uma transformação, convertendo de string para valor numérico.
   // str.trim() remove espaços em branco extras
   let numeros17 = inputString.split(' ').map(str => Number(str.trim()))
 
-  // Método .join(', ') éfoiusado para juntar os elementos do array com um separador de ", " (vírgula e espaço).
+  // Método .join(', ') foi usado para juntar os elementos do array com um separador de ", " (vírgula e espaço).
   res = `<b>Pares:</b> ${numeros17.filter(verificaPar).join(', ')}`
 
   console.log(res)
@@ -305,3 +304,26 @@ function ex17_pt05(){
 }
 
 //Ex 18 - Ordenação (sort): Dado o array [5, 1, 9, 3, 7], ordene-o em ordem crescente usando sort.
+function ex18_pt05(){
+  const inputString = document.getElementById('txArray18').value;
+
+
+  // inputString.split(' ') divide a string em um array de strings. Por exemplo, "1, 2, 3" se torna ["1", " 2", " 3"].
+  // inputString.map() percorre cada item da lista e mapeia uma transformação, convertendo de string para valor numérico.
+  // str.trim() remove espaços em branco extras
+  let numeros18 = inputString.split(' ')
+  let res = `<b>Não ordenado:</b> ${numeros18.join(', ')}`
+
+  // método .sort() ordena o array de strings 
+  numeros18.sort()
+
+  // numeros18.map() percorre cada item da lista e mapeia uma transformação, convertendo de string para valor numérico.
+  // str.trim() remove espaços em branco extras
+  numeros18.map(str => Number(str.trim()))
+
+  // Método .join(', ') foi usado para juntar os elementos do array numérico com um separador de ", " (vírgula e espaço).
+  res = `<b>Ordenado:</b> ${numeros18.join(', ')}`
+
+  console.log(res)
+  document.getElementById('pRes18').innerHTML = res;
+}
