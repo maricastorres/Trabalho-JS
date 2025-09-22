@@ -228,3 +228,31 @@ function ex14_pt04() {
   console.log(resposta)
   document.getElementById("pRes14").innerHTML = resposta
 }
+
+//Ex 15 - Manipulação de Propriedades: Crie um objeto livro com título e autor. Adicione dinamicamente a propriedade ano. Altere o título. Exclua a propriedade autor. Mostre o objeto atualizado no console.
+
+let livro15 = {
+    titulo: document.getElementById("txTitulo15").value,
+    autor: document.getElementById("txAutor15").value
+  }
+
+function ex15_pt04(){
+  let nova_chave = "ano"
+  let ano = document.getElementById("txAno15").value
+  livro15[nova_chave] = ano
+
+  let resposta = `<b>Título:</b> ${livro15.titulo}<br><b>Autor:</b> ${livro15.autor}<br><b>Ano:</b> ${livro15.ano}`
+
+  console.log(resposta)
+  document.getElementById("pRes15").innerHTML = resposta
+}
+
+
+function ex15_pt04_del(){
+  delete livro15.autor
+
+  let resposta = `<b>Título:</b> ${livro15.titulo}<br><b>Autor:</b> ${livro15.autor}<br><b>Ano:</b> ${livro15.ano}`
+
+  console.log(resposta)
+  document.getElementById("pRes15").innerHTML = resposta
+}
