@@ -303,3 +303,5 @@ function ex17_pt05(){
   console.log(res)
   document.getElementById('pRes17').innerHTML = res;
 }
+
+//Ex 18 - Ordenação (sort): Dado o array [5, 1, 9, 3, 7], ordene-o em ordem crescente usando sort.
