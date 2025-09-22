@@ -303,10 +303,10 @@ function ex17_pt05(){
   document.getElementById('pRes17').innerHTML = res;
 }
 
+
 //Ex 18 - Ordenação (sort): Dado o array [5, 1, 9, 3, 7], ordene-o em ordem crescente usando sort.
 function ex18_pt05(){
   const inputString = document.getElementById('txArray18').value;
-
 
   // inputString.split(' ') divide a string em um array de strings. Por exemplo, "1, 2, 3" se torna ["1", " 2", " 3"].
   // inputString.map() percorre cada item da lista e mapeia uma transformação, convertendo de string para valor numérico.
