@@ -307,7 +307,6 @@ function ex17_pt05(){
 //Ex 18 - Ordenação (sort): Dado o array [5, 1, 9, 3, 7], ordene-o em ordem crescente usando sort.
 function ex18_pt05(){
   const inputString = document.getElementById('txArray18').value;
-<<<<<<< HEAD
   let num = new Array()
   num = inputString.split(' ').map(str => str.trim())
   res = `${num.sort(function(a, b){
