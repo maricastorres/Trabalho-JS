@@ -304,30 +304,6 @@ function ex17_pt05(){
 }
 
 
-//Ex 18 - Ordenação (sort): Dado o array [5, 1, 9, 3, 7], ordene-o em ordem crescente usando sort.
-function ex18_pt05(){
-  const inputString = document.getElementById('txArray18').value;
-
-  // inputString.split(' ') divide a string em um array de strings. Por exemplo, "1, 2, 3" se torna ["1", " 2", " 3"].
-  // inputString.map() percorre cada item da lista e mapeia uma transformação, convertendo de string para valor numérico.
-  // str.trim() remove espaços em branco extras
-  let numeros18 = inputString.split(' ')
-  //let res = `<b>Não ordenado:</b> ${numeros18}`
-  //document.getElementById('pRes18').innerHTML = res;
-
-  // método .sort() ordena o array de strings 
-  numeros18.sort((a, b) => a - b)
-
-  // numeros18.map() percorre cada item da lista e mapeia uma transformação, convertendo de string para valor numérico.
-  // str.trim() remove espaços em branco extras
-  numeros18.map(str => Number(str.trim()))
-
-  // Método .join(', ') foi usado para juntar os elementos do array numérico com um separador de ", " (vírgula e espaço).
-  res = `<b>Ordenado:</b> ${numeros18.join(', ')}`
-
-  console.log(res)
-  document.getElementById('pRes18').innerHTML = res;
-}
 
 //Ex 19 -Dado o array [2, 5, 8, 11, 14], use filter para selecionar apenas os números maiores que 5 e depois map para multiplicá-los por 2. Mostre o resultado final.
 
