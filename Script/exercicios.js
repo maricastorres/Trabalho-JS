@@ -1,4 +1,6 @@
+// ****************************************************************************************
 // Parte 01 - Declaração de Variáveis (let e const) (4 questões)
+// ****************************************************************************************
 
 // Ex01 - Declaração com let: Crie uma variável let idade e atribua sua idade. Depois, atribua um novo valor representando a idade daqui a 5 anos. Mostre os dois valores no console: “Minha idade hoje é <idade> e daqui a 5 anos será <nova_idade>”
 
@@ -80,8 +82,9 @@ function ex04_pt01() {
   document.getElementById('pRes04L').innerHTML = num04
   console.log(num04)
 }
-// **************************************************************
+// ****************************************************************************************
 // Parte 02 - Estruturas Condicionais (if, else if, else e operador ternário) (4 questões)
+// ****************************************************************************************
 
 // Ex05 - Verificação de Idade: Peça ao usuário (com prompt) sua idade.
 // Se for menor que 12, mostre "Criança".
@@ -135,8 +138,9 @@ function ex08_pt02() {
   document.getElementById('pRes08').innerHTML = `O número inserido é ${res}`
 }
 
-// **************************************************************
+// ****************************************************************************************
 // Parte 3 – Laços de Repetição (for, while, for...in, for...of) (4 questões)
+// ****************************************************************************************
 
 //Ex 09 - Tabuada com for: Receba um número e mostre a tabuada de 1 a 10 usando for
 function ex09_pt03() {
@@ -194,8 +198,9 @@ function ex12_pt03() {
   }
 }
 
-// **************************************************************
+// ****************************************************************************************
 // Parte 4 – Objetos (3 questões)
+// ****************************************************************************************
 
 //Ex 13 - Criação de Objeto: Crie um objeto carro com propriedades marca, modelo e ano. Mostre todas as propriedades no console, usando uma instrução console.log para cada uma das propriedades.
 
