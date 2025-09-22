@@ -255,3 +255,4 @@ function ex15_pt04_del(){
   console.log(resposta)
   document.getElementById("pRes15").innerHTML = resposta
 }
+
