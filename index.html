@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Exercícios JS</title>
-    <link rel="stylesheet" href="Estilo/index.css"> <!-- estilo --> 
+    <link rel="stylesheet" href="Estilo/index.css"> <!-- estilo -->
     <script src="Script/exercicios.js"></script> <!-- Script -->
 </head>
+
 <body>
     <!-- CABEÇALHO PRINCIPAL -->
     <div id="dvCorpo">
         <h1 class="titulosMain" id="tituloMain">Lista de Exercícios - JavaScript</h1>
 
         <!-- ************************** PARTE 1 ************************** -->
-         <!-- Cabeçalho parte 1 -->
-         <div id="dvParte1" class="dvParte">
+        <!-- Cabeçalho parte 1 -->
+        <div id="dvParte1" class="dvParte">
             <h2 id="tituloP1">Parte 1 – Declaração de Variáveis (let e const) (4 questões)</h2>
         </div>
 
@@ -26,9 +28,9 @@
                 <h3>Exercício 01 - Declaração com let:</h3>
 
                 <p class="pEnunciado">
-                    Crie uma variável let idade e atribua sua idade. Depois, atribua um novo valor 
-                    representando a idade daqui a 5 anos. Mostre os dois valores no console: “Minha 
-                    idade hoje é < idade > e daqui a 5 anos será < nova_idade >”
+                    Crie uma variável let idade e atribua sua idade. Depois, atribua um novo valor
+                    representando a idade daqui a 5 anos. Mostre os dois valores no console: “Minha
+                    idade hoje é < idade> e daqui a 5 anos será < nova_idade>”
                 </p>
             </div>
 
@@ -38,14 +40,14 @@
 
                 <!-- Informe a Idade -->
                 <p>
-                    <p>Informe sua idade:</p>
-                    <input type="number" class="txEx" id="txIdade">
+                <p>Informe sua idade:</p>
+                <input type="number" class="txEx" id="txIdade">
                 </p>
 
                 <!-- botão Ex01 -->
                 <button onclick="ex01_pt01()" class="btExc">Executar</button>
             </div>
-            
+
             <!-- Ex01 - Saida de Dados -->
             <div class="dvRes">
                 <h4 class="pRes" id="titleRes">Saida:</h4>
@@ -54,36 +56,36 @@
                 <p id="pIdade5" class="pRes"></p>
             </div>
         </div>
-        
+
         <!-- ##### EXERCÍCIO 02 A ##### -->
         <div id="dvLista2a" class="dvLista">
-            
+
             <!-- Cabeçalho Ex02 A -->
             <div id="dvCab02" class="dvCab">
                 <h3>Exercício 02 - Uso de const:</h3>
 
                 <p class="pEnunciado">
-                    a) Declare uma constante PI com valor 3.14159. Tente atribuir outro valor a PI e 
+                    a) Declare uma constante PI com valor 3.14159. Tente atribuir outro valor a PI e
                     veja o erro no console. Explique por que isso acontece.
                 </p>
             </div>
-            
+
             <!-- Ex02 A - Entrada de Dados -->
             <div class="dvExc">
                 <h4 class="pTitulos">Entrada:</h4>
                 <!-- Alterar o Valor de pi -->
                 <p>
-                    <p>Tente reatribuir o valor de pi:</p>
-                    <input type="text" class="txEx" id="txErroPi">
+                <p>Tente reatribuir o valor de pi:</p>
+                <input type="text" class="txEx" id="txErroPi">
                 </p>
                 <!-- botão Ex02 A -->
                 <button onclick="ex02a_pt01()" class="btExc">Executar</button>
             </div>
-            
+
             <!-- Ex02 A - Saída de Dados -->
             <div class="dvRes">
                 <h4 class="pRes">Saida:</h4>
-                
+
                 <p class="pRes">const pi = 3.14159</p>
                 <p id="pRes02" class="pRes"></p>
             </div>
@@ -96,7 +98,7 @@
             <div id="dvCab02b" class="dvCab">
 
                 <p class="pEnunciado">
-                    b) Declare uma constante SemanasDoAno sem atribuir valor. Na linha seguinte 
+                    b) Declare uma constante SemanasDoAno sem atribuir valor. Na linha seguinte
                     atribua o valor 52. O que ocorre?
                 </p>
             </div>
@@ -116,23 +118,23 @@
 
                 <p class="pRes">const semanaDoAno = ""</p>
                 <p id="pRes02b" class="pRes"></p>
-            
+
             </div>
 
         </div>
 
         <!-- ##### EXERCÍCIO 03 ##### -->
-        <div class="dvLista">
+        <div id="dvLista3" class="dvLista">
 
             <!-- Cabeçalho Ex03 -->
             <div id="dvCab03" class="dvCab">
                 <h3>Exercício 03 - Concatenação de Strings:</h3>
 
                 <p class="pTitulos">
-                    Crie três variáveis (let nome, let sobrenome, let anoNascimento) e mostre no 
+                    Crie três variáveis (let nome, let sobrenome, let anoNascimento) e mostre no
                     console a frase:
-                    "Olá, meu nome é < nome completo > e eu nasci em < anoNascimento >". < nome 
-                    completo > deve ser a concatenação de nome e sobrenome.
+                    "Olá, meu nome é < nome completo> e eu nasci em < anoNascimento>". < nome completo> deve ser a
+                                concatenação de nome e sobrenome.
                 </p>
             </div>
 
@@ -147,12 +149,12 @@
                 <p>
                     <label>Sobrenome:</label>
                     <br>
-                <input type="text" class="txEx" id="txSobrenome">
+                    <input type="text" class="txEx" id="txSobrenome">
                 </p>
                 <p>
                     <label>Ano de nascimento:</label>
                     <br>
-                <input type="text" class="txEx" id="txAnoNasc">
+                    <input type="text" class="txEx" id="txAnoNasc">
                 </p>
 
                 <!-- botão Ex03 -->
@@ -166,20 +168,20 @@
             </div>
         </div>
 
-        <!-- ##### EXERCÍCIO 04 ##### -->       
-        <div class="dvLista">
+        <!-- ##### EXERCÍCIO 04 ##### -->
+        <div id="dvLista4" class="dvLista">
 
             <!-- Cabeçalho Ex04 -->
             <div id="dvCab04" class="dvCab">
                 <h3>Exercício 04 - Diferença de Escopo:</h3>
 
                 <p class="pTitulos">
-                    Declare uma variável let numero = 10 fora de um bloco {}. Dentro do bloco, 
-                    declare novamente let numero = 20. Mostre o valor da variável dentro e fora do 
+                    Declare uma variável let numero = 10 fora de um bloco {}. Dentro do bloco,
+                    declare novamente let numero = 20. Mostre o valor da variável dentro e fora do
                     bloco com console.log.
                 </p>
             </div>
-            
+
             <!-- Ex04 - Entrada de Dados -->
             <div class="dvExc">
                 <h4 class="pEnunciado">Entrada:</h4>
@@ -197,25 +199,26 @@
         </div>
 
         <!-- ************************** PARTE 2 ************************** -->
-         <!-- Cabeçalho parte 2 -->
+        <!-- Cabeçalho parte 2 -->
         <div id="dvParte2" class="dvParte">
-            <h2 id="tituloP2">Parte 2 – Estruturas Condicionais (if, else if, else e operador ternário) (4 questões)</h2>
+            <h2 id="tituloP2">Parte 2 – Estruturas Condicionais (if, else if, else e operador ternário) (4 questões)
+            </h2>
         </div>
 
         <!-- ##### EXERCÍCIO 05 ##### -->
-        <div id="dvLista1" class="dvLista">
+        <div id="dvLista5" class="dvLista">
 
             <!-- Cabeçalho Ex05 -->
             <div id="dvCab01" class="dvCab">
                 <h3>Exercício 05 - Verificação de Idade:</h3>
 
                 <p class="pEnunciado">
-                   Peça ao usuário (com prompt) sua idade.
-                    <ul>
-                        <li>Se for menor que 12, mostre "Criança".</li>
-                        <li>Se estiver entre 12 e 17, mostre "Adolescente".</li>
-                        <li>Se for maior ou igual a 18, mostre "Adulto". </li>
-                    </ul>
+                    Peça ao usuário (com prompt) sua idade.
+                <ul>
+                    <li>Se for menor que 12, mostre "Criança".</li>
+                    <li>Se estiver entre 12 e 17, mostre "Adolescente".</li>
+                    <li>Se for maior ou igual a 18, mostre "Adulto". </li>
+                </ul>
                 </p>
             </div>
 
@@ -230,7 +233,7 @@
                 <!-- botão Ex05 -->
                 <button onclick="ex05_pt02()" class="btExc">Executar</button>
             </div>
-            
+
             <!-- Ex05 - Saida de Dados -->
             <div class="dvRes">
                 <h4 class="pRes" id="titleRes">Saida:</h4>
@@ -240,14 +243,14 @@
         </div>
 
         <!-- ##### EXERCÍCIO 06 ##### -->
-        <div id="dvLista1" class="dvLista">
+        <div id="dvLista6" class="dvLista">
 
             <!-- Cabeçalho Ex06 -->
             <div id="dvCab01" class="dvCab">
                 <h3>Exercício 06 - Número Par ou Ímpar:</h3>
 
                 <p class="pEnunciado">
-                  Receba um número via prompt e use if/else para verificar se é par ou ímpar.
+                    Receba um número via prompt e use if/else para verificar se é par ou ímpar.
                 </p>
             </div>
 
@@ -255,14 +258,14 @@
             <div class="dvExc">
                 <h4 class="titulos">Entrada:</h4>
                 <p>
-                    <label for="">Número:</label>   
+                    <label for="">Número:</label>
                     <input class="txEx" id="txNum06" type="text">
                 </p>
 
                 <!-- botão Ex06 -->
                 <button onclick="ex06_pt02()" class="btExc">Executar</button>
             </div>
-            
+
             <!-- Ex06 - Saida de Dados -->
             <div class="dvRes">
                 <h4 class="pRes" id="titleRes">Saida:</h4>
@@ -272,19 +275,20 @@
         </div>
 
         <!-- ##### EXERCÍCIO 07 ##### -->
-        <div id="dvLista1" class="dvLista">
+        <div id="dvLista7" class="dvLista">
 
             <!-- Cabeçalho Ex07 -->
             <div id="dvCab01" class="dvCab">
                 <h3>Exercício 07 - Nota de Aluno: </h3>
 
                 <p class="pEnunciado">
-                     Receba uma nota de 0 a 10. 
-                    <ul>
-                        <li> >= 7: "Aprovado"</li>
-                        <li>>= 5 e < 7: "Recuperação"</li>
-                        <li>< 5: "Reprovado" </li>
-                    </ul>
+                    Receba uma nota de 0 a 10.
+                <ul>
+                    <li> >= 7: "Aprovado"</li>
+                    <li>>= 5 e < 7: "Recuperação" </li>
+                    <li>
+                        < 5: "Reprovado" </li>
+                </ul>
                 </p>
             </div>
 
@@ -292,18 +296,18 @@
             <div class="dvExc">
                 <h4 class="titulos">Entrada:</h4>
                 <p>
-                    <label for="">Aluno:</label>   
+                    <label for="">Aluno:</label>
                     <input class="txEx" id="txAluno07" type="text">
                 </p>
                 <p>
-                    <label for="">Nota:</label>   
+                    <label for="">Nota:</label>
                     <input class="txEx" id="txNum07" type="text">
                 </p>
 
                 <!-- botão Ex07 -->
                 <button onclick="ex07_pt02()" class="btExc">Executar</button>
             </div>
-            
+
             <!-- Ex07 - Saida de Dados -->
             <div class="dvRes">
                 <h4 class="pRes" id="titleRes">Saida:</h4>
@@ -313,14 +317,15 @@
         </div>
 
         <!-- ##### EXERCÍCIO 08 ##### -->
-        <div id="dvLista1" class="dvLista">
+        <div id="dvLista8" class="dvLista">
 
             <!-- Cabeçalho Ex08 -->
             <div id="dvCab01" class="dvCab">
                 <h3>Exercício 08 - Operador Ternário:</h3>
 
                 <p class="pEnunciado">
-                    Receba um número via prompt e mostre no console: "Positivo" se maior que 0, "Negativo" se menor que 0, ou "Zero" caso contrário, usando apenas operador ternário.
+                    Receba um número via prompt e mostre no console: "Positivo" se maior que 0, "Negativo" se menor que
+                    0, ou "Zero" caso contrário, usando apenas operador ternário.
                 </p>
             </div>
 
@@ -335,7 +340,7 @@
                 <!-- botão Ex08 -->
                 <button onclick="ex08_pt02()" class="btExc">Executar</button>
             </div>
-            
+
             <!-- Ex08 - Saida de Dados -->
             <div class="dvRes">
                 <h4 class="pRes" id="titleRes">Saida:</h4>
@@ -343,25 +348,25 @@
                 <p id="pRes08" class="pRes"></p>
             </div>
         </div>
-        
+
         <!-- ************************** PARTE 3 ************************** -->
         <!-- Cabeçalho parte 3 -->
-        <div id="dvParte2" class="dvParte">
+        <div id="dvParte3" class="dvParte">
             <h2 id="tituloP2">Parte 3 – Laços de Repetição (for, while, for...in, for...of) (4 questões)</h2>
         </div>
 
         <!-- ##### EXERCÍCIO 09 ##### -->
         <div id="dvLista9" class="dvLista">
-    
+
             <!-- Cabeçalho Ex09 -->
             <div id="dvCab09" class="dvCab">
                 <h3>Exercício 09 - Tabuada com for:</h3>
-    
+
                 <p class="pEnunciado">
                     Receba um número e mostre a tabuada de 1 a 10 usando for.
                 </p>
             </div>
-    
+
             <!-- Ex09 - Entrada de Dados -->
             <div class="dvExc">
                 <h4 class="titulos">Entrada:</h4>
@@ -369,11 +374,11 @@
                     <label for="">Número:</label>
                     <input class="txEx" id="txNum09" type="text">
                 </p>
-    
+
                 <!-- botão Ex09 -->
                 <button onclick="ex09_pt03()" class="btExc">Executar</button>
             </div>
-            
+
             <!-- Ex09 - Saida de Dados -->
             <div class="dvRes" id="dvRes09">
                 <h4 class="pRes" id="titleRes">Saida:</h4>
@@ -381,17 +386,17 @@
             </div>
         </div>
         <!-- ##### EXERCÍCIO 10 ##### -->
-        <div id="dvLista9" class="dvLista">
-    
+        <div id="dvLista10" class="dvLista">
+
             <!-- Cabeçalho Ex10 -->
             <div id="dvCab09" class="dvCab">
                 <h3>Exercício 10 - Tabuada com for:</h3>
-    
+
                 <p class="pEnunciado">
                     Mostre no console a contagem regressiva de 10 até 1 com while
                 </p>
             </div>
-    
+
             <!-- Ex10 - Entrada de Dados -->
             <div class="dvExc">
                 <h4 class="titulos">Entrada:</h4>
@@ -399,7 +404,7 @@
                 <!-- botão Ex10 -->
                 <button onclick="ex10_pt03()" class="btExc">Executar</button>
             </div>
-            
+
             <!-- Ex10 - Saida de Dados -->
             <div class="dvRes" id="dvRes10">
                 <h4 class="pRes" id="titleRes">Saida:</h4>
@@ -409,16 +414,17 @@
 
         <!-- ##### EXERCÍCIO 11 ##### -->
         <div id="dvLista11" class="dvLista">
-    
+
             <!-- Cabeçalho Ex1 -->
             <div id="dvCab11" class="dvCab">
                 <h3>Exercício 11 - Percorendo Objetos com for...in::</h3>
-    
+
                 <p class="pEnunciado">
-                    Crie um objeto pessoa com nome, idade e cidade. Use for...in para listar suas propriedades e valores.
+                    Crie um objeto pessoa com nome, idade e cidade. Use for...in para listar suas propriedades e
+                    valores.
                 </p>
             </div>
-    
+
             <!-- Ex11 - Entrada de Dados -->
             <div class="dvExc">
                 <h4 class="titulos">Entrada:</h4>
@@ -434,11 +440,11 @@
                     <label for="">Cidade:</label>
                     <input class="txEx" id="txCid11" type="text">
                 </p>
-    
+
                 <!-- botão Ex11 -->
                 <button onclick="ex11_pt03()" class="btExc">Executar</button>
             </div>
-            
+
             <!-- Ex11 - Saida de Dados -->
             <div class="dvRes" id="dvRes11">
                 <h4 class="pRes" id="titleRes">Saida:</h4>
@@ -448,26 +454,26 @@
 
         <!-- ##### EXERCÍCIO 12 ##### -->
         <div id="dvLista12" class="dvLista">
-    
+
             <!-- Cabeçalho Ex12 -->
             <div id="dvCab11" class="dvCab">
                 <h3>Exercício 12 - Percorendo Arrays com for...of:</h3>
-    
+
                 <p class="pEnunciado">
                     Crie um array de frutas e use for...of para mostrar cada fruta no console.
                 </p>
             </div>
-    
+
             <!-- Ex12 - Entrada de Dados -->
             <div class="dvExc">
                 <h4 class="titulos">Entrada:</h4>
                 <p>
-                     let frutas = ["Abacaxi", "Manga", "Laranja", "Banana", "Melancia", "Melão"] 
+                    let frutas = ["Abacaxi", "Manga", "Laranja", "Banana", "Melancia", "Melão"]
                 </p>
                 <!-- botão Ex12 -->
                 <button onclick="ex12_pt03()" class="btExc">Executar</button>
             </div>
-            
+
             <!-- Ex12 - Saida de Dados -->
             <div class="dvRes" id="dvRes12">
                 <h4 class="pRes" id="titleRes">Saida:</h4>
@@ -477,22 +483,23 @@
 
         <!-- ************************** PARTE 4 ************************** -->
         <!-- Cabeçalho parte 4 -->
-        <div id="dvParte2" class="dvParte">
+        <div id="dvParte4" class="dvParte">
             <h2 id="tituloP2">Parte 4 – Objetos (3 questões)</h2>
         </div>
 
         <!-- ##### EXERCÍCIO 13 ##### -->
-        <div id="dvLista9" class="dvLista">
-    
+        <div id="dvLista13" class="dvLista">
+
             <!-- Cabeçalho Ex13 -->
             <div id="dvCab13" class="dvCab">
                 <h3>Exercício 13 - Criação de Objeto:</h3>
-    
+
                 <p class="pEnunciado">
-                    Crie um objeto carro com propriedades marca, modelo e ano. Mostre todas as propriedades no console, usando uma instrução console.log para cada uma das propriedades.
+                    Crie um objeto carro com propriedades marca, modelo e ano. Mostre todas as propriedades no console,
+                    usando uma instrução console.log para cada uma das propriedades.
                 </p>
             </div>
-    
+
             <!-- Ex13 - Entrada de Dados -->
             <div class="dvExc">
                 <h4 class="titulos">Entrada:</h4>
@@ -502,69 +509,119 @@
                 </p>
 
                 <p>
-                    <label for = "">Modelo:</label>
-                    <input class ="txEx" id="txModelo13" type="text">
+                    <label for="">Modelo:</label>
+                    <input class="txEx" id="txModelo13" type="text">
                 </p>
-                
+
                 <p>
-                    <label for = "">Ano:</label>
-                    <input class ="txEx" id="txAno13" type="text">
+                    <label for="">Ano:</label>
+                    <input class="txEx" id="txAno13" type="text">
                 </p>
-                
-    
+
+
                 <!-- botão Ex13 -->
                 <button onclick="ex13_pt04()" class="btExc">Executar</button>
             </div>
-            
+
             <!-- Ex13 - Saida de Dados -->
             <div class="dvRes" id="dvRes13">
                 <h4 class="pRes" id="titleRes">Saida:</h4>
                 <p id="pRes13" class="pRes"></p>
             </div>
         </div>
-        
+
         <!-- ##### EXERCÍCIO 14 ##### -->
-        <div id="dvLista9" class="dvLista">
-    
+        <div id="dvLista14" class="dvLista">
+
             <!-- Cabeçalho Ex14 -->
             <div id="dvCab14" class="dvCab">
                 <h3>Exercício 14 - Método de Objeto:</h3>
-    
+
                 <p class="pEnunciado">
-                    Adicione ao objeto carro um método descricao() que retorne uma string: "Marca: < marca >, Modelo: < modelo >, Ano: < ano >". Chame esse método e mostre o resultado no console.
+                    Adicione ao objeto carro um método descricao() que retorne uma string: "Marca: < marca>, Modelo: <
+                            modelo>, Ano: < ano>". Chame esse método e mostre o resultado no console.
                 </p>
             </div>
-    
+
             <!-- Ex14 - Entrada de Dados -->
             <div class="dvExc">
                 <h4 class="titulos">Entrada:</h4>
                 <p>
                     <label for="txMarca14">Marca:</label>
                     <input class="txEx" id="txMarca14" type="text">
-                   
                 </p>
 
                 <p>
-                    <label for = "">Modelo:</label>
-                    <input class ="txEx" id="txModelo14" type="text">
+                    <label for="">Modelo:</label>
+                    <input class="txEx" id="txModelo14" type="text">
                 </p>
-                
+
                 <p>
-                    <label for = "">Ano:</label>
-                    <input class ="txEx" id="txAno14" type="text">
+                    <label for="">Ano:</label>
+                    <input class="txEx" id="txAno14" type="text">
                 </p>
-                
-    
+
+
                 <!-- botão Ex14 -->
                 <button onclick="ex14_pt04()" class="btExc">Executar</button>
             </div>
-            
+
             <!-- Ex14 - Saida de Dados -->
             <div class="dvRes" id="dvRes14">
                 <h4 class="pRes" id="titleRes">Saida:</h4>
                 <p id="pRes14" class="pRes"></p>
             </div>
         </div>
+
+        <!-- ##### EXERCÍCIO 15 ##### -->
+        <div id="dvLista15" class="dvLista">
+
+            <!-- Cabeçalho Ex15 -->
+            <div id="dvCab14" class="dvCab">
+                <h3>Exercício 15 - Manipulação de Propriedades::</h3>
+
+                <p class="pEnunciado">
+                    Crie um objeto livro com título e autor.
+                <ul>
+                    <li>Adicione dinamicamente a propriedade ano.</li>
+                    <li>Altere o título.</li>
+                    <li>Exclua a propriedade autor.</li>
+                    <li>Mostre o objeto atualizado no console. </li>
+                </ul>
+                </p>
+            </div>
+
+            <!-- Ex15 - Entrada de Dados -->
+            <div class="dvExc">
+                <h4 class="titulos">Entrada:</h4>
+                <p>
+                    <label for="txTitulo15">Título:</label>
+                    <input class="txEx" id="txTitulo15" type="text">
+                </p>
+
+                <p>
+                    <label for="txAutor15">Autor:</label>
+                    <input class="txEx" id="txAutor15" type="text">
+                </p>
+
+                <p>
+                    <label for="txAno15">Ano:</label>
+                    <input class="txEx" id="txAno15" type="text">
+                </p>
+
+
+                <!-- botão Ex15 -->
+                <button onclick="ex15_pt04()" class="btExc">1.Executar</button>
+                <button onclick="ex15_pt04_del()" class="btExc">2.Deletar</button>
+            </div>
+
+            <!-- Ex15 - Saida de Dados -->
+            <div id="dvRes15" class="dvRes">
+                <h4 id="titleRes" class="pRes">Saida:</h4>
+                <p id="pRes15" class="pRes"></p>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>

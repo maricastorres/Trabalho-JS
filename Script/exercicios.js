@@ -209,7 +209,6 @@ function ex13_pt04() {
 
   console.log(resposta)
   document.getElementById("pRes13").innerHTML = resposta
-
 }
 
 //Ex 14 - Método em Objeto: Adicione ao objeto carro um método descricao() que retorne uma string: "Marca: <marca>, Modelo: <modelo>, Ano: <ano>". Chame esse método e mostre o resultado no console.
@@ -225,4 +224,45 @@ function ex14_pt04() {
   let resposta = carro.descricao()
   console.log(resposta)
   document.getElementById("pRes14").innerHTML = resposta
+}
+
+//Ex 15 - Manipulação de Propriedades: Crie um objeto livro com título e autor. Adicione dinamicamente a propriedade ano. Altere o título. Exclua a propriedade autor. Mostre o objeto atualizado no console.
+
+let livro15 = {}
+
+function ex15_pt04(){
+  // 1. Cria o objeto livro15 dentro da função, para que ele seja quando a função for executada com o clique de botão. Inicializa a propriedade título vazia porque na parte 3 do exercício ela vai ser populada
+  livro15 = {
+    titulo: '',
+    autor: document.getElementById("txAutor15").value
+  }
+
+  // 2. Adiciona dinamicamente a propriedade ano.
+  let nova_chave = "ano"
+  let ano = document.getElementById("txAno15").value
+  livro15[nova_chave] = ano
+
+  // 3. Altera o título.
+  livro15.titulo = document.getElementById('txTitulo15').value
+
+  let resposta = `<b>Título:</b> ${livro15.titulo}<br><b>Autor:</b> ${livro15.autor}<br><b>Ano:</b> ${livro15.ano}`
+
+  //console.log(resposta)
+  console.log("Objeto após acicionar o ano:", livro15);
+  document.getElementById("pRes15").innerHTML = resposta
+}
+
+
+function ex15_pt04_del(){
+  // A função de deletar deve ser executada após a de adicionar.
+  // A variável livro15 precisa ser global para ser acessada aqui
+  if (livro15) { // Verifica se o objeto existe antes de tentar manipulá-lo.
+        delete livro15.autor;
+    }
+
+  let resposta = `<b>Título:</b> ${livro15.titulo}<br><b>Autor:</b> ${livro15.autor}<br><b>Ano:</b> ${livro15.ano}`
+
+  //console.log(resposta)
+  console.log("Objeto após excluir o autor:", livro15);
+  document.getElementById("pRes15").innerHTML = resposta
 }
