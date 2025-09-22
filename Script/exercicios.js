@@ -312,10 +312,11 @@ function ex18_pt05(){
   // inputString.map() percorre cada item da lista e mapeia uma transformação, convertendo de string para valor numérico.
   // str.trim() remove espaços em branco extras
   let numeros18 = inputString.split(' ')
-  let res = `<b>Não ordenado:</b> ${numeros18.join(', ')}`
+  //let res = `<b>Não ordenado:</b> ${numeros18}`
+  //document.getElementById('pRes18').innerHTML = res;
 
   // método .sort() ordena o array de strings 
-  numeros18.sort()
+  numeros18.sort((a, b) => a - b)
 
   // numeros18.map() percorre cada item da lista e mapeia uma transformação, convertendo de string para valor numérico.
   // str.trim() remove espaços em branco extras
