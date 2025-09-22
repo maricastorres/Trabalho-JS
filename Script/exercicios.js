@@ -328,3 +328,14 @@ function ex18_pt05(){
   console.log(res)
   document.getElementById('pRes18').innerHTML = res;
 }
+//Ex 19 -Dado o array [2, 5, 8, 11, 14], use filter para selecionar apenas os números maiores que 5 e depois map para multiplicá-los por 2. Mostre o resultado final.
+
+function ex19_pt05(){
+  const inputString = document.getElementById('txArray19').value;
+  let numeros19 = inputString.split(' ').map(str => Number (str.trim()))
+
+  res = `<b>Maiores que 5 e multiplicados por 2:</b> ${numeros19.filter(num => num > 5).map(num => num * 2).join(', ')}`
+
+  console.log(res)
+  document.getElementById('pRes19').innerHTML=res;
+}
