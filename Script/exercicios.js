@@ -86,7 +86,6 @@ function ex04_pt01() {
 // Se for menor que 12, mostre "Criança".
 // Se estiver entre 12 e 17, mostre "Adolescente".
 // Se for maior ou igual a 18, mostre "Adulto"..
-
 function ex05_pt02() {
   let idade05 = document.getElementById('txIdade05').value
   let res
@@ -227,9 +226,7 @@ function ex14_pt04() {
 }
 
 //Ex 15 - Manipulação de Propriedades: Crie um objeto livro com título e autor. Adicione dinamicamente a propriedade ano. Altere o título. Exclua a propriedade autor. Mostre o objeto atualizado no console.
-
 let livro15 = {}
-
 function ex15_pt04(){
   // 1. Cria o objeto livro15 dentro da função, para que ele seja quando a função for executada com o clique de botão. Inicializa a propriedade título vazia porque na parte 3 do exercício ela vai ser populada
   livro15 = {
@@ -251,8 +248,6 @@ function ex15_pt04(){
   console.log("Objeto após acicionar o ano:", livro15);
   document.getElementById("pRes15").innerHTML = resposta
 }
-
-
 function ex15_pt04_del(){
   // A função de deletar deve ser executada após a de adicionar.
   // A variável livro15 precisa ser global para ser acessada aqui
@@ -265,4 +260,46 @@ function ex15_pt04_del(){
   //console.log(resposta)
   console.log("Objeto após excluir o autor:", livro15);
   document.getElementById("pRes15").innerHTML = resposta
+}
+
+//Ex 16 - Dobrar Valores (map): Dado o array [1, 2, 3, 4, 5], use map para criar um novo array com cada número dobrado.
+function ex16_pt05(){
+  const inputString = document.getElementById('txArray16').value;
+
+  // 1. inputString.split(' ') para divide a string em um array de strings.
+  // Por exemplo, "1, 2, 3" se torna ["1", " 2", " 3"].
+  // 2. inputString.map() percorre cada item da lista e mapeia uma transformação, convertendo de string para valor numérico.
+  // str.trim() remove espaços em branco extras
+  let array = inputString.split(' ').map(str => Number(str.trim()))
+  
+  // .map() dobra cada número do array
+  let a_dobro = array.map(a => a * 2);
+
+  // Método .join(', ') foi usado para juntar os elementos do array com um separador de ", " (vírgula e espaço).
+  res = `<b>Dobro:</b> ${a_dobro.join(', ')}`
+
+  console.log(a_dobro); // Saída esperada: [2, 4, 6, 8, 10]
+  document.getElementById('pRes16').innerHTML = res
+}
+
+//Ex 17 - Filtrar Números Pares (filter): Dado o array [10, 15, 20, 25, 30], use filter para criar um array apenas com números pares.
+function verificaPar(num){
+  if (num % 2 === 0){
+    return num
+  }    
+}
+function ex17_pt05(){
+  const inputString = document.getElementById('txArray17').value;
+
+  // 1. inputString.split(' ') para divide a string em um array de strings.
+  // Por exemplo, "1, 2, 3" se torna ["1", " 2", " 3"].
+  // 2. inputString.map() percorre cada item da lista e mapeia uma transformação, convertendo de string para valor numérico.
+  // str.trim() remove espaços em branco extras
+  let numeros17 = inputString.split(' ').map(str => Number(str.trim()))
+
+  // Método .join(', ') éfoiusado para juntar os elementos do array com um separador de ", " (vírgula e espaço).
+  res = `<b>Pares:</b> ${numeros17.filter(verificaPar).join(', ')}`
+
+  console.log(res)
+  document.getElementById('pRes17').innerHTML = res;
 }
