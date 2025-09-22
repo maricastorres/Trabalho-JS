@@ -3,7 +3,6 @@
 // ****************************************************************************************
 
 // Ex01 - Declaração com let: Crie uma variável let idade e atribua sua idade. Depois, atribua um novo valor representando a idade daqui a 5 anos. Mostre os dois valores no console: “Minha idade hoje é <idade> e daqui a 5 anos será <nova_idade>”
-
 function ex01_pt01() {
   let idade = Number(document.getElementById('txIdade').value)
 
@@ -56,8 +55,6 @@ function ex02b_pt01() {
 
 // Ex03 - Concatenação de Strings: 
 // Crie três variáveis (let nome, let sobrenome, let anoNascimento) e mostre no  console a frase: "Olá, meu nome é <nome completo> e eu nasci em <anoNascimento>". <nome  completo> deve ser a concatenação de nome e sobrenome.
-
-
 function ex03_pt01() {
 
   let nome = document.getElementById('txNome').value
@@ -74,7 +71,6 @@ function ex03_pt01() {
 
 // Ex04 - Diferença de escopo: REVER
 // Declare uma variável let numero = 10 fora de um bloco {}. Dentro do bloco, declare novamente let numero = 20. Mostre o valor da variável dentro e fora do bloco com console.log.
-
 let num04 = 10
 console.log(num04)
 function ex04_pt01() {
@@ -172,7 +168,6 @@ function ex10_pt03() {
 }
 
 // Ex11 - Percorrendo Objetos com for...in: Crie um objeto pessoa com nome, idade e cidade. Use for...in para listar suas propriedades e valores.
-
 function ex11_pt03() {
   const pessoa = {
     nome: document.getElementById('txNome11').value,
@@ -187,8 +182,8 @@ function ex11_pt03() {
   }
   document.getElementById('pRes11').innerHTML = txt
 }
-// Ex12 - Percorrendo Arrays com for...of: Crie um array de frutas e use for...of para mostrar cada fruta no console.
 
+// Ex12 - Percorrendo Arrays com for...of: Crie um array de frutas e use for...of para mostrar cada fruta no console.
 function ex12_pt03() {
   let frutas = ["Abacaxi", "Manga", "Laranja", "Banana", "Melancia", "Melão"]
   for (let fruta of frutas) {
@@ -203,7 +198,6 @@ function ex12_pt03() {
 // ****************************************************************************************
 
 //Ex 13 - Criação de Objeto: Crie um objeto carro com propriedades marca, modelo e ano. Mostre todas as propriedades no console, usando uma instrução console.log para cada uma das propriedades.
-
 function ex13_pt04() {
   const carro = {
     marca: document.getElementById("txMarca13").value,
@@ -219,7 +213,6 @@ function ex13_pt04() {
 }
 
 //Ex 14 - Método em Objeto: Adicione ao objeto carro um método descricao() que retorne uma string: "Marca: <marca>, Modelo: <modelo>, Ano: <ano>". Chame esse método e mostre o resultado no console.
-
 function ex14_pt04() {
   const carro = {
     marca: document.getElementById("txMarca14").value,
