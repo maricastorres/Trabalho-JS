@@ -326,3 +326,17 @@ function ex19_pt05(){
   console.log(res)
   document.getElementById('pRes19').innerHTML=res
 }
+ // Ex 21 -  Escreva um programa para controlar uma fila de atendimento, deve guardar o nome da pessoa ao clicar no botão "entrar na fila" e inserir no final de uma fila. Quando a pessoa for atendida, deve clicar no botão "atender" que vai retirar o nome da pessoa que está no primeiro lugar na fila. Também guarde a data e hora que a pessoa entrou na fila (use Date.now() para obter essa informação . Veja como formatar a data usando Intl.DateTimeFormat).Quando ela for atendida (retirada da fila), deve calcular quanto tempo levou para ser atendida. Use vetores para armazenar as informações. Para inserir no final da fila use o método "push()" e para remover do início da fila use o método "shift()" . Crie um vetor para armazenar o nome e a hora (hora, minutos e segundos) que a pessoa entrou na fila. Em outro vetor armazene o nome, data e hora que pessoa entrou na fila, data e hora que foi atendida e quanto tempo demorou para ser atendida. Cada vez que uma pessoa entrar na fila ou for atendida deve exibir os dados armazenados nos dois vetores.
+
+let fila = []
+function ex21_pt06(){  
+  let nome21 = document.getElementById("txNome21").value
+  fila.push(nome21)
+  console.log(fila)
+  document.getElementById("pRes21").innerHTML = `<b>Em espera:</b> ${fila}`
+}
+function ex21_pt06_shift(){
+  document.getElementById("pRes21At").innerHTML = `<b>Atendendo:</b> ${fila.shift()}`
+  document.getElementById("pRes21").innerHTML = `<b>Em espera:</b> ${fila}`
+}
+  
