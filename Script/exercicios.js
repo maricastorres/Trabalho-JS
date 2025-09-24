@@ -336,7 +336,9 @@ let histAtend = [] //Array histórico de atendimento
 function ex21_pt06(){
 
   let nome = document.getElementById("txNome21").value // Pegando nome do cliente 
-  fila.push(nome)// Inserindo nome na array
+  if(nome){
+    fila.push(nome)// Inserindo nome na array
+  }
 
   document.getElementById("dvFila21").innerHTML = "" // Limpando a div dvFila21
 
@@ -346,7 +348,10 @@ function ex21_pt06(){
     res.innerHTML = `${Number(n)+1}. ${fila[n]}`
     document.getElementById("dvFila21").appendChild(res)
   }
+  document.querySelector("#txNome21").value=""
 }
+
+
 // Em Atendimento
 function ex21_pt06_shift(){
   let atend
@@ -381,7 +386,7 @@ function ex21_pt06_shift(){
   // for in para exibir o hitorico de atendimento 
   for(let n in histAtend){
     let res = document.createElement("p")
-    res.innerHTML = `${histAtend[n]} - Data:00/00/0000 Inicio: 00:00h Témino:00:00h - Duração: 00h 00m`
+    res.innerHTML = `${histAtend[n]} - Data:00/00/0000 Inicio:00:00h Témino:00:00h - Duração:00h 00m`
     document.getElementById("dvHist21").appendChild(res)
   }
 }

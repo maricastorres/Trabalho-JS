@@ -41,18 +41,20 @@
                             <input class="txEx" id="txNome21" type="text">
                         </p>
                         <!-- botão Ex21 -->
-                        <button onclick="ex21_pt06()" class="btExc">Adicionar</button>
+                        <input type="reset" onclick="ex21_pt06()" class="btExc" value="Entrar na fila">
                 </div>
 
                 <!-- Ex21 - Saida de Dados -->
                 <!-- Fila de Espera -->
-                <div id="dvFila">
-                    <h4 id="titleRes" class="pRes">Fila De Espera:</h4>
-                    <div id="dvFila21" class="dvRes">
-                        <p id="pRes21" class="pRes">Nenhuma pessoa na fila de espera</p>
+                <form action="">
+                    <div id="dvFila">
+                        <h4 id="titleRes" class="pRes">Fila De Espera:</h4>
+                        <div id="dvFila21" class="dvRes">
+                            <p id="pRes21" class="pRes">Nenhuma pessoa na fila de espera</p>
+                        </div>
+                        <button onclick="ex21_pt06_shift()" class="btExc">Atender</button>
                     </div>
-                    <button onclick="ex21_pt06_shift()" class="btExc">Atender</button>
-                </div>
+                </form>
                 <!-- Em Atendimento -->
 
                 <div id="dvLista">
