@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 21 - Parte 6</title>
+    <link rel="stylesheet" href="Estilo/ex21pt6.css"> <!-- estilo -->
+    <script src="Script/exercicios.js"></script> <!-- Script -->
+</head>
+
+<body>
+    <div id="" class="dvEx21">
+        <!-- Cabeçalho Ex21 -->
+        <div id="" class="dvCab">
+            <!-- Cabeçalho parte 4 -->
+            <div id="" class="dvParte">
+                <h2 id="">Parte 6 – Controle de Fila de Atendimento</h2>
+                <h3>Exercício 21</h3>
+                <p class="pEnunciado">
+                    Escreva um programa para controlar uma fila de atendimento, deve guardar o nome da pessoa ao clicar
+                    no botão "entrar na fila" e inserir no final de uma fila. Quando a pessoa for atendida, deve clicar
+                    no botão "atender" que vai retirar o nome da pessoa que está no primeiro lugar na fila. Também
+                    guarde a data e hora que a pessoa entrou na fila (use Date.now() para obter essa informação . Veja
+                    como formatar a data usando Intl.DateTimeFormat).Quando ela for atendida (retirada da fila), deve
+                    calcular quanto tempo levou para ser atendida. Use vetores para armazenar as informações. Para
+                    inserir no final da fila use o método "push()" e para remover do início da fila use o método
+                    "shift()" . Crie um vetor para armazenar o nome e a hora (hora, minutos e segundos) que a pessoa
+                    entrou na fila. Em outro vetor armazene o nome, data e hora que pessoa entrou na fila, data e hora
+                    que foi atendida e quanto tempo demorou para ser atendida. Cada vez que uma pessoa entrar na fila ou
+                    for atendida deve exibir os dados armazenados nos dois vetores.
+                </p>
+            </div>
+
+            <!-- Ex21 - Entrada de Dados-->
+            <div id="" class="dvCorpo">
+                <div id="dvEnt">
+                        <h4>Entre com seus dados:</h4>
+                        <p>
+                            <label for="">Nome: </label>
+                            <input class="txEx" id="txNome21" type="text">
+                        </p>
+                        <!-- botão Ex21 -->
+                        <button onclick="ex21_pt06()" class="btExc">Adicionar</button>
+                </div>
+
+                <!-- Ex21 - Saida de Dados -->
+                <!-- Fila de Espera -->
+                <div id="dvFila">
+                    <h4 id="titleRes" class="pRes">Fila De Espera:</h4>
+                    <div id="dvFila21" class="dvRes">
+                        <p id="pRes21" class="pRes">Nenhuma pessoa na fila de espera</p>
+                    </div>
+                    <button onclick="ex21_pt06_shift()" class="btExc">Atender</button>
+                </div>
+                <!-- Em Atendimento -->
+
+                <div id="dvLista">
+                    <h4 id="titleRes" class="pRes">Em Atendimento:</h4>
+                    <div id="dvListaA21" class="">
+                        <p id="pRes21At" class="pRes">Nenhuma pessoa em atendimento</p>
+                    </div>
+                </div>
+
+                
+            </div>
+            <!-- Histórico de Atendimento -->
+            <h4 id="titleRes" class="pRes">Historico de Atendimento:</h4>
+            <div id="dvHist21" class="">
+                <p id="pResHist21" class="pRes">Nenhuma pessoa atendida</p>
+            </div>
+        </div>
+</body>
+
+</html>
