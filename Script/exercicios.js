@@ -328,6 +328,7 @@ function ex19_pt05(){
  // Ex 21 -  Escreva um programa para controlar uma fila de atendimento, deve guardar o nome da pessoa ao clicar no botão "entrar na fila" e inserir no final de uma fila. Quando a pessoa for atendida, deve clicar no botão "atender" que vai retirar o nome da pessoa que está no primeiro lugar na fila. Também guarde a data e hora que a pessoa entrou na fila (use Date.now() para obter essa informação . Veja como formatar a data usando Intl.DateTimeFormat).Quando ela for atendida (retirada da fila), deve calcular quanto tempo levou para ser atendida. Use vetores para armazenar as informações. Para inserir no final da fila use o método "push()" e para remover do início da fila use o método "shift()" . Crie um vetor para armazenar o nome e a hora (hora, minutos e segundos) que a pessoa entrou na fila. Em outro vetor armazene o nome, data e hora que pessoa entrou na fila, data e hora que foi atendida e quanto tempo demorou para ser atendida. Cada vez que uma pessoa entrar na fila ou for atendida deve exibir os dados armazenados nos dois vetores.
 
 let fila = []
+let hisFila = []
 
 // Fila de Espera
 function ex21_pt06(){  
@@ -336,24 +337,34 @@ function ex21_pt06(){
   fila.push(nome21)
   console.log(fila)
 
-  document.getElementById("dvRes21").innerHTML = '' // esvaziando a div antes de executar a função novamente
+  document.getElementById("dvFila21").innerHTML = '' // esvaziando a div antes de executar a função novamente
 
   for(let i in fila){
     let res = document.createElement("p")
     res.innerHTML = `<b>${Number(i)+1}.</b> ${fila[i]}`
-    document.getElementById("dvRes21").appendChild(res)
+    document.getElementById("dvFila21").appendChild(res)
   }
 }
 // Em Atendimento
 function ex21_pt06_shift(){
+  // Retirando da fila e colocando em atendimento
   document.getElementById("pRes21At").innerHTML = `<b>Atendendo:</b> ${fila.shift()}`
   
-  document.getElementById("dvRes21").innerHTML = '' // esvaziando a div antes de executar a função novamente
-
+  document.getElementById("dvListaA21").innerHTML = '' // esvaziando a div antes de executar a função novamente
+  
   for(let i in fila){
     let res = document.createElement("p")
     res.innerHTML = `<b>${Number(i)+1}.</b> ${fila[i]}`
-    document.getElementById("dvRes21").appendChild(res)
+    document.getElementById("dvFila21").appendChild(res)
+  }
+  //inclundo historico de atendimento
+  hisFila.push(fila[0])
+
+  // exibindo Histórico de Atendimento
+  document.getElementById("dvHist21").innerHTML = ''
+  for(let i in hisFila){
+    let res = document.createElement("p")
+    res.innerHTML = `<b>${Number(i)+1}.</b> ${hisFila[i]}`
+    document.getElementById("dvHist21").appendChild(res)
   }
 }
-// Histórico de Atendimento
