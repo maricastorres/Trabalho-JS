@@ -359,7 +359,9 @@ function ex21_pt06_shift(){
   if(fila){
     //retira o primeiro da fila e armazena na variável atend
     atend = fila.shift()
-    histAtend.push(atend)
+    if(atend){
+      histAtend.push(atend)
+    }
   }
   
 
