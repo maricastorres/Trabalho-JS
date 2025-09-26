@@ -330,9 +330,12 @@ function ex19_pt05(){
 
 
 let fila = [] // Array Fila de espera
+let celula = []
 let histAtend = [] //Array histórico de atendimento 
 let atend = [] 
 let paraAtend = null
+let filaShift
+
 
 let inicioEspera
 let inicioAtend
@@ -348,9 +351,10 @@ function tempo(){
   // 2. Usando os métodos 'toLocale' para formatar
   const dataFormatada = dataAtual.toLocaleDateString('pt-BR') // Formata a DATA
   const horaFormatada = dataAtual.toLocaleTimeString('pt-BR') // Formata a HORA
+
+  let tempoTotal = [dataFormatada, horaFormatada, timeStamp]
   
-  return (`${dataFormatada}, ${horaFormatada}`)
-  
+  return tempoTotal
 }
 
 function atualizarDisplayFila() {
@@ -365,7 +369,7 @@ function atualizarDisplayFila() {
     for (let i in fila) {
       inicioEspera = tempo()
       let res = document.createElement("p")
-      res.innerHTML = `${Number(i) + 1}. ${fila[i]}<br>Entrada: ${inicioEspera}`
+      res.innerHTML = `${Number(i) + 1}. ${fila[i][0]} - ${fila[i][1]}, ${fila[i][2]}` // nome, data formatada, hora formatada de entrada na fila de espera
       divFila.appendChild(res)
     }
   }
@@ -374,10 +378,12 @@ function atualizarDisplayFila() {
 // Fila de Espera
 function ex21_pt06(){
   let nome = document.getElementById("txNome21").value // capurando o nome
-  // verificando de o nome tem caracteres e inserinbdo o válido no array fila
+  // verificando de o nome tem caracteres e inserindo o válido no array fila
   let nomeIsblank = nome.trim()
+  inicioEspera = tempo() // Seta a data, hora e o timeStamp do inicio de entrada na fila de espera
   if(nomeIsblank.length > 0){
-    fila.push(nome)
+    celula = [nome, inicioEspera[0], inicioEspera[1]]
+    fila.push(celula)
   }else(
     window.alert("Digite um nome válido")
   )
@@ -391,31 +397,42 @@ function ex21_pt06_shift(){
   paraAtend = document.getElementById("pRes21At")
   if(fila.length > 0){
     if(paraAtend.innerHTML === "Nenhuma pessoa em Atendimento"){
-      atend.push(fila.shift())
+      inicioAtend = tempo() // Seta a data, hora e o timeStamp do inicio do atendimento
+      tempoEspera = new Date(inicioAtend[2] - inicioEspera[2])
+      filaShift = fila.shift() // Array que seleciona o nome, data formatada de entrada na fila, hora formatada de entrada na fila
+      atend.push([filaShift[0], filaShift[1], filaShift[2], inicioAtend[0], inicioAtend[1], tempoEspera.toLocaleTimeString("pt-BR")]) // no array atend esttá entrando: nome, data formatada de entrada na fila, hora formatada de entrada na fila, data formatada de entrada em attendimento, hora formattadsa de entrada de entrada em atendimento e o timeStamp da duração de tempo de espera
+      console.log(atend)
       if(atend){
         inicioAtend = tempo(fila)
-        document.getElementById("pRes21At").innerHTML = `${atend[0]}<br>Entrada: ${inicioEspera}<br>Início Atendimento: ${inicioAtend}`
+        for(let i in atend){
+          document.getElementById("pRes21At").innerHTML = `${atend[i][0]} - ${atend[i][3]}, ${atend[i][4]}` // nome, data formatada de entrada em attendimento, hora formatada de entrada de entrada em atendimento
+        }
       }
     }else{
       window.alert("Existe pessoa em atendimento")
     }
   }
-  atualizarDisplayFila();
+  atualizarDisplayFila()
 }
 
 function ex21_pt06_hist(){
   if(atend.length > 0){
-    histAtend.push(atend.shift())
+    fimAtend = tempo() // Seta a data, hora e o timeStamp do fim do atendimento
+    tempoAtend = new Date(fimAtend[2] - inicioAtend[2]).getTime()
+    histAtend.push([filaShift[0], filaShift[1], filaShift[2], inicioAtend[0], inicioAtend[1], fimAtend[0], fimAtend[1], tempoAtend.toLocaleTimeString("pt-BR").getTime(),
+    tempoEspera.toLocaleTimeString("pt-BR")])
     document.getElementById("dvHist21").innerHTML = ""
       for(let i in histAtend){
         let res = document.createElement("p")
-        res.innerHTML = `${Number(i)+1}. ${histAtend[i]}`
+        res.innerHTML = `${Number(i)+1}. ${histAtend[i][0]} <br> Entrada: ${histAtend[i][1]}, ${histAtend[i][2]} <br> Inicio do Atendimento ${histAtend[i][3]}, ${histAtend[i][4]} <br> Fim do Atendimento: ${histAtend[i][5]}, ${histAtend[i][6]} <br> Duração do Atendimento: ${histAtend[i][7]} <br> Tempo de espera: ${histAtend[i][8]}`
         document.getElementById("dvHist21").appendChild(res)
       }
     document.getElementById("pRes21At").innerHTML = "Nenhuma pessoa em Atendimento"
-  } else {
+  }else{
     // Caso não tenha ninguém em atendimento, avisa o usuário.
     window.alert("Ninguém em atendimento para ser finalizado.")
   }
 }
+
+// nome, entrada: data e hora, inicio atendimento: data e hora, encerramento atendimento: data e hora, duração atendimento, tempo de espera
 
