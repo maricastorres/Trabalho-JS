@@ -334,6 +334,25 @@ let histAtend = [] //Array histórico de atendimento
 let atend = [] 
 let paraAtend = null
 
+let inicioEspera
+let inicioAtend
+let fimAtend
+let tempoEspera = 0
+let tempoAtend = 0
+
+function tempo(){
+  // 1. Obtendo o timeStamp e convertendo-o para um objeto Date
+  const timeStamp = Date.now()
+  const dataAtual = new Date(timeStamp)
+
+  // 2. Usando os métodos 'toLocale' para formatar
+  const dataFormatada = dataAtual.toLocaleDateString('pt-BR') // Formata a DATA
+  const horaFormatada = dataAtual.toLocaleTimeString('pt-BR') // Formata a HORA
+  
+  return (`${dataFormatada}, ${horaFormatada}`)
+  
+}
+
 function atualizarDisplayFila() {
   const divFila = document.getElementById("dvFila21")
   divFila.innerHTML = ""// Sempre limpa a exibição atual primeiro
@@ -344,8 +363,9 @@ function atualizarDisplayFila() {
   } else {
     // Se houver pessoas, cria a lista
     for (let i in fila) {
+      inicioEspera = tempo()
       let res = document.createElement("p")
-      res.innerHTML = `${Number(i) + 1}. ${fila[i]}`
+      res.innerHTML = `${Number(i) + 1}. ${fila[i]}<br>Entrada: ${inicioEspera}`
       divFila.appendChild(res)
     }
   }
@@ -367,22 +387,22 @@ function ex21_pt06(){
 
 // Em Atendimento
 function ex21_pt06_shift(){
-  // caso tenha pessoas na fila de espera, ele retira o primeiro da fila e adiciona na variavel paraAtend
+  // caso tenha pessoas na fila de espera, ele passa o nome do primeiro da fila e adiciona na variavel paraAtend
   paraAtend = document.getElementById("pRes21At")
   if(fila.length > 0){
     if(paraAtend.innerHTML === "Nenhuma pessoa em Atendimento"){
-      atend.push(paraAtend, data)
+      atend.push(fila.shift())
       if(atend){
-        document.getElementById("pRes21At").innerHTML = atend[0]
+        inicioAtend = tempo(fila)
+        document.getElementById("pRes21At").innerHTML = `${atend[0]}<br>Entrada: ${inicioEspera}<br>Início Atendimento: ${inicioAtend}`
       }
-    
-    
     }else{
       window.alert("Existe pessoa em atendimento")
     }
   }
   atualizarDisplayFila();
 }
+
 function ex21_pt06_hist(){
   if(atend.length > 0){
     histAtend.push(atend.shift())
@@ -398,3 +418,4 @@ function ex21_pt06_hist(){
     window.alert("Ninguém em atendimento para ser finalizado.")
   }
 }
+
