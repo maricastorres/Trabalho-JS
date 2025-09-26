@@ -331,64 +331,70 @@ function ex19_pt05(){
 
 let fila = [] // Array Fila de espera
 let histAtend = [] //Array histórico de atendimento 
-let atend = []
-let paraAtend
+let atend = [] 
+let paraAtend = null
+
+function atualizarDisplayFila() {
+  const divFila = document.getElementById("dvFila21")
+  divFila.innerHTML = ""// Sempre limpa a exibição atual primeiro
+
+  if (fila.length === 0) {
+    // Se a fila estiver vazia, mostra a mensagem
+    divFila.innerHTML = "<p>Nenhuma pessoa na fila de espera</p>"
+  } else {
+    // Se houver pessoas, cria a lista
+    for (let i in fila) {
+      let res = document.createElement("p")
+      res.innerHTML = `${Number(i) + 1}. ${fila[i]}`
+      divFila.appendChild(res)
+    }
+  }
+}
 
 // Fila de Espera
 function ex21_pt06(){
-
-  let nome = document.getElementById("txNome21").value // Pegando nome do cliente 
-  if(nome){
-    fila.push(nome)// Inserindo nome na array
-  }else{
-    window.alert("Insira um nome válido")
-  }
-
-  document.getElementById("dvFila21").innerHTML = "" // Limpando a div dvFila21
-
-  // for in para exibir a fila 
-  for(let n in fila){
-    let res = document.createElement("p")
-    res.innerHTML = `${Number(n)+1}. ${fila[n]}`
-    document.getElementById("dvFila21").appendChild(res)
-  }
-  document.querySelector("#txNome21").value=""
+  let nome = document.getElementById("txNome21").value // capurando o nome
+  // verificando de o nome tem caracteres e inserinbdo o válido no array fila
+  let nomeIsblank = nome.trim()
+  if(nomeIsblank.length > 0){
+    fila.push(nome)
+  }else(
+    window.alert("Digite um nome válido")
+  )
+  document.querySelector("#txNome21").value = "" // Limpando o valor do input txNome21
+  atualizarDisplayFila()
 }
-
 
 // Em Atendimento
 function ex21_pt06_shift(){
+  // caso tenha pessoas na fila de espera, ele retira o primeiro da fila e adiciona na variavel paraAtend
   paraAtend = document.getElementById("pRes21At")
-  if(paraAtend.innerHTML == "Nenhuma pessoa em Atendimento"){
-    let dataInicio = new Date()
-    atend.push(fila.shift(), dataInicio)
-    if(atend){
-      paraAtend.innerHTML = atend[0] //mostra a pessoa sendo atendida
+  if(fila.length > 0){
+    if(paraAtend.innerHTML === "Nenhuma pessoa em Atendimento"){
+      atend.push(paraAtend, data)
+      if(atend){
+        document.getElementById("pRes21At").innerHTML = atend[0]
+      }
+    
+    
+    }else{
+      window.alert("Existe pessoa em atendimento")
     }
-  }else{
-    window.alert("Pessoa ainda em atendimento")
   }
-  
-  document.getElementById("dvFila21").innerHTML = "" // Limpando a div dvFila21
-  
-  // for in para exibir a fila atualizada
-  for(let n in fila){
-    let res = document.createElement("p")
-    res.innerHTML = `${Number(n)+1}. ${fila[n]}`
-    document.getElementById("dvFila21").appendChild(res)
-  }
+  atualizarDisplayFila();
 }
-
 function ex21_pt06_hist(){
-  if(atend){
-    histAtend.push(atend)
-    document.getElementById("dvHist21").innerHTML = "" // Limpando a div dvHist21
-
-    for(let n in histAtend){
-      let res = document.createElement("p")
-      res.innerHTML = `${histAtend[n]} - Data:00/00/0000 Inicio:00:00h Témino:00:00h - Duração:00h 00m`
-      document.getElementById("dvHist21").appendChild(res)
-    }
-    paraAtend.innerHTML = "Nenhuma pessoa em Atendimento"
+  if(atend.length > 0){
+    histAtend.push(atend.shift())
+    document.getElementById("dvHist21").innerHTML = ""
+      for(let i in histAtend){
+        let res = document.createElement("p")
+        res.innerHTML = `${Number(i)+1}. ${histAtend[i]}`
+        document.getElementById("dvHist21").appendChild(res)
+      }
+    document.getElementById("pRes21At").innerHTML = "Nenhuma pessoa em Atendimento"
+  } else {
+    // Caso não tenha ninguém em atendimento, avisa o usuário.
+    window.alert("Ninguém em atendimento para ser finalizado.")
   }
 }
