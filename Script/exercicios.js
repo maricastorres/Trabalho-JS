@@ -377,7 +377,7 @@ function atualizarDisplayFila() {
         for (let i in fila) {
             // Exibe o nome, a data e a hora de entrada
             let res = document.createElement("p")
-            res.innerHTML = `${Number(i) + 1}. ${fila[i][0]} - Entrada: ${fila[i][1]}, ${fila[i][2]}`
+            res.innerHTML = `<b>${Number(i) + 1}. ${fila[i][0]}</b> - Entrada: ${fila[i][1]}, ${fila[i][2]}`
             divFila.appendChild(res)
         }
     }
@@ -429,7 +429,7 @@ function ex21_pt06_shift() {
             ]);
             
             // Atualiza a tela para mostrar quem está em atendimento
-            paraAtendEl.innerHTML = `${nome} - Início: ${inicioAtend[0]}, ${inicioAtend[1]}`
+            paraAtendEl.innerHTML = `<b>${nome}</b> - Início: ${inicioAtend[0]}, ${inicioAtend[1]}`
         } else {
             window.alert("Existe pessoa em atendimento")
         }
