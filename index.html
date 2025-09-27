@@ -748,36 +748,30 @@
                 <p id="pRes19" class="pRes"></p>
              </div>
         </div>
+        <!-- ************************** PARTE 6 ************************** -->
+        <!-- Cabeçalho parte 6 -->
+        <div id="dvParte6" class="dvParte">
+            <h2 id="tituloP2">Parte 6 – Controle de Fila de Atendimento</h2>
+        </div>
         <!-- ##### EXERCÍCIO 21 ##### -->
-        <div id="dvLista19" class="dvLista">
-
-            <!-- Cabeçalho Ex21 -->
+        <div id="dvLista21" class="dvLista">    
             <div id="dvCab19" class="dvCab">
-                <h3>Exercício 19 - Encadeando Métodos:</h3>
+                <h3>Exercício 21</h3>
                 <p class="pEnunciado">
-                   Dado o array [2, 5, 8, 11, 14], use filter para selecionar apenas os números maiores que 5 e depois map para multiplicá-los por 2. Mostre o resultado final
+                   Escreva um programa para controlar uma fila de atendimento, deve guardar o nome da pessoa ao clicar
+                    no botão "entrar na fila" e inserir no final de uma fila. Quando a pessoa for atendida, deve clicar
+                    no botão "atender" que vai retirar o nome da pessoa que está no primeiro lugar na fila. Também
+                    guarde a data e hora que a pessoa entrou na fila (use Date.now() para obter essa informação . Veja
+                    como formatar a data usando Intl.DateTimeFormat).Quando ela for atendida (retirada da fila), deve
+                    calcular quanto tempo levou para ser atendida. Use vetores para armazenar as informações. Para
+                    inserir no final da fila use o método "push()" e para remover do início da fila use o método
+                    "shift()" . Crie um vetor para armazenar o nome e a hora (hora, minutos e segundos) que a pessoa
+                    entrou na fila. Em outro vetor armazene o nome, data e hora que pessoa entrou na fila, data e hora
+                    que foi atendida e quanto tempo demorou para ser atendida. Cada vez que uma pessoa entrar na fila ou
+                    for atendida deve exibir os dados armazenados nos dois vetores.
                 </p>
             </div>
-
-             <!-- Ex21 - Entrada de Dados-->
-            <div class ="dvExc">
-                <h4 class="titulos">Entrada:</h4>
-                <p>
-                    <label for="">Nome: </label>
-                    <input class ="txEx" id="txNome21" type="text">
-                </p>
-                <!-- botão Ex21 -->
-                <button onclick="ex21_pt06()" class="btExc">Adicionar</button>
-                <button onclick="ex21_pt06_shift()" class="btExc">Atender</button>
-            </div>
-            <!-- Ex21 - Saida de Dados -->
-            <div id="dvRes21" class="dvRes">
-                <h4 id="titleRes" class="pRes">Saida:</h4>
-                <h6 id="titleRes" class="pRes">FILA DE ESPERA:</h6>
-                <p id="pRes21" class="pRes"></p>
-                <h6 id="titleRes" class="pRes">HISTÓRICO DE ATENDIMENTO:</h6>
-                <p id="pRes21At" class="pRes"></p>
-            </div>
+            <a href="Ex21.html"><button class="btExc">Exercício 21</button></a>
         </div>
 </body>
 
